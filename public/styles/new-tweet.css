@@ -1,0 +1,37 @@
+p {
+  font-size: 25px;
+  font-style: bold;
+}
+hr {
+  border: 2px solid rgb(15, 14, 14);
+}
+input {
+  background-color: #4154A1;
+  font-family: 'Bungee', cursive;
+  float: left;
+  color: #ffff;
+}
+
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  background-color: #f4f1ec;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-bottom: 2px solid black;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+  float: right;
+  font-weight: 600;
+}
+
+.tweet {
+  color: #43464B;
+}
