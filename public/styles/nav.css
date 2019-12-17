@@ -1,0 +1,21 @@
+nav {
+  position: sticky;
+  background-color: #4056A1;
+  color: #ffffff;
+  height: 120px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1.5em;
+  z-index: 1;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+nav span {
+  font-family: 'Bungee', cursive;
+}
