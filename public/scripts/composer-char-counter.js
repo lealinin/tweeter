@@ -1,7 +1,7 @@
 $(document).ready(function() {
   console.log('here');
   $('textarea').keyup(function() {
-    console.log('test');
+    // console.log('test');
     let length = $(this).val().length;
     let counter = 140;
     if (counter - length < 0) {
