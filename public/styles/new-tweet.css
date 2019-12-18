@@ -1,15 +1,9 @@
-p {
-  font-size: 25px;
-  font-style: bold;
-}
-hr {
-  border: 2px solid rgb(15, 14, 14);
-}
 input {
   background-color: #4154A1;
   font-family: 'Bungee', cursive;
   float: left;
   color: #ffff;
+  margin-top: .10em;
 }
 
 textarea {
@@ -23,8 +17,27 @@ textarea {
   background-color: #f4f1ec;
   width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
-  border-bottom: 2px solid black;
+  font-weight: 400;
+  font-style: normal;
+  border-bottom: 4px solid black;
 }
+
+/* textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  background-color: #f4f1ec;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border-bottom: 4px solid black;
+  padding: 20px;
+} */
 
 .counter {
   font-family: 'Bungee', cursive;
@@ -32,6 +45,30 @@ textarea {
   font-weight: 600;
 }
 
-.tweet {
+.tweet-title {
   color: #43464B;
 }
+
+article {
+  border: 4px solid black;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: .35em;
+}
+
+article.tweet header {
+  height: 100%;
+  background-color: #f4f1ec;
+  display: flex;
+}
+
+span.user {
+  margin-left: auto;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+
