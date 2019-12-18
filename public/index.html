@@ -7,8 +7,10 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,400i,600,600i,700&display=swap"
+    rel="stylesheet">
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -30,6 +32,11 @@
 
   <!-- Character Counter JS -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+  <!-- Font Awesome JS -->
+  <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
+  <!-- <script src="https://use.fontawesome.com/acdb889deb.js"></script> -->
+
 </head>
 
 <body>
@@ -52,13 +59,35 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2 class="tweet">Compose Tweet</h2>
+      <h2 class="tweet-title">Compose Tweet</h2>
       <form action="/tweets" method="POST">
-        <textarea name="text" maxlength="140" placeholder="What are you humming about?"></textarea>
-        <!-- <hr> -->
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
         <span class="counter">140</span>
       </form>
+    </section>
+    <br>
+    <br>
+    <br>
+    <section class="tweet-container">
+
+      <article class="tweet">
+        <header>
+          <i class="far fa-smile"></i>
+          <span class="name">Newton</span>
+          <span class="user">@SirIsaac</span>
+        </header>
+        <textarea name="text" maxlength="140" class="tweetbody"></textarea>
+        <footer>
+          <span>10 days ago</span>
+          <span>
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
+          </span>
+        </footer>
+      </article>
+
     </section>
   </main>
 </body>
