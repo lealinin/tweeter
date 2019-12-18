@@ -22,23 +22,6 @@ textarea {
   border-bottom: 4px solid black;
 }
 
-/* textarea {
-  border: none;
-  overflow: auto;
-  outline: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  resize: none;
-  background-color: #f4f1ec;
-  width: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  border-bottom: 4px solid black;
-  padding: 20px;
-} */
-
 .counter {
   font-family: 'Bungee', cursive;
   float: right;
@@ -63,7 +46,7 @@ article.tweet header {
   display: flex;
 }
 
-span.user {
+span.handle {
   margin-left: auto;
 }
 
@@ -77,5 +60,12 @@ article.dropshadow:hover {
 -moz-box-shadow: 5px 5px 0px rgb(105, 128, 202);
 -webkit-box-shadow: 5px 5px 0px rgb(105, 128, 202);
   box-shadow: 5px 10px 0px rgb(105, 128, 202);
-  }
+}
+
+img.tweet {
+  /* max-width: 100%;
+  height: auto; */
+  width: 50px; 
+  height: 50px; /* for now */
+}
 
