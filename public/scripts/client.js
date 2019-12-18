@@ -25,33 +25,37 @@ const tweetData = {
 
 const createTweetElement = function (tweet) {
   // creates a template for all elements of the article
-  const $tweet = `
-  <article class="tweet dropshadow">
+  let $tweet = $("<article>").addClass("tweet");
+  
+  $tweet.append(`
     <header class="tweet">
-      <img src="${tweet}.user.avatars" class="tweet">
-      <span class="${tweet}.user.name"></span>
-      <span class="${tweet}.user.handle"></span>
+      <img src="${tweet.user.avatars}">
+      <span>${tweet.user.name}</span>
+      <span>${tweet.user.handle}</span>
     </header>
-    <textarea name="${tweet}.content.text maxlength="140" class="tweetbody"></textarea>
+    <textarea>${tweet.content.text}</textarea>
     <footer class="tweet">
-      <span class="${tweet}.created_at"></span>
+      <span>${tweet.created_at}</span>
       <div class="icons">
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
         <i class="fas fa-heart"></i>
       </div>
     </footer>
-  </article>
-  `
-  // returns the tweet article
+  `)
+   // returns the tweet article
+  return $tweet;
 }
 
-const $tweet = createTweetElement(tweetData);
 
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
-$('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+$(document).ready(function() {
 
+  const $tweet = createTweetElement(tweetData);
 
+  // Test / driver code (temporary)
+  console.log($tweet); // to see what it looks like
+  $('.tweet-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+
+});
 
 
