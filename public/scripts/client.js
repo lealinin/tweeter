@@ -69,28 +69,26 @@ const createTweetElement = function (tweet) {
 $(document).ready(function() {
   const $form = $('.tweet-post');
   $form.on('submit', function(event) {
-    console.log('Form clicked, performing ajax call...');
+    console.log('Tweet form clicked, performing ajax call...');
     event.preventDefault();
-    console.log($(this).serialize());
-    $.ajax('/tweets', {method: 'GET'})
-    .then(function (data) {
+    const data = $(this).serialize();
+    $.ajax({
+      url: '/tweets', 
+      method: 'POST', 
+      data: data})
+    .then(function () {
       console.log('Success: ', data);
+      loadTweets();
     });
   });
 });
 
-// AJAX Example
-    // $(function () {
-    //   const $button = $('#load-more-posts');
-    //   $button.on('click', function () {
-    //     console.log('Button clicked, performing ajax call...');
-    //     $.ajax('more-posts.html', { method: 'GET' })
-    //       .then(function (morePostsHtml) {
-    //         console.log('Success: ', morePostsHtml);
-    //         $button.replaceWith(morePostsHtml);
-    //       });
-    //   });
-    // });
+const loadTweets = function() {
+  $.ajax({
+    url: '/tweets',
+    method: 'GET'})
+  .then(renderTweets);
+}
 
 
 
