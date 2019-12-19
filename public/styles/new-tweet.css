@@ -20,6 +20,7 @@ textarea {
   font-weight: 400;
   font-style: normal;
   border-bottom: 4px solid black;
+  margin-top: .10em;
 }
 
 .counter {
