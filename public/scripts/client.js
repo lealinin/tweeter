@@ -38,7 +38,7 @@ const renderTweets = function (tweets) {
   // takes return value and appends it to the tweets container
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('.tweet-container').append($tweet);
+    $('.tweet-container').prepend($tweet);
   }
 }
 
@@ -71,8 +71,22 @@ $(document).ready(function() {
   $form.on('submit', function(event) {
     console.log('Tweet form clicked, performing ajax call...');
     event.preventDefault();
+    // Implement validation before sending the 
+    // form data to the server. If any criterion of 
+    // your validation is not met, you should notify
+    // the user by rendering a message on the page
+    let tweetField = $(this).find('textarea').val();
+    if (tweetField.length > 140) {
+      alert('Your tweet is too long!');
+      return;
+    }
+    if (tweetField === '' || tweetField === null) {
+      alert('Your field is empty');
+      return;
+    }
+
     const data = $(this).serialize();
-    $.ajax({
+    return $.ajax({
       url: '/tweets', 
       method: 'POST', 
       data: data})
@@ -89,6 +103,4 @@ const loadTweets = function() {
     method: 'GET'})
   .then(renderTweets);
 }
-
-
 
