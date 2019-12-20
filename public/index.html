@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
@@ -66,7 +70,6 @@
       <div class="validation">
         <p id="error-message"></p>
       </div>
-      <!-- <h2 class="tweet-title">Compose Tweet</h2> -->
       <form class="tweet-post" action="/tweets" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
@@ -80,8 +83,10 @@
       <article class="tweet">
         <header class="tweet">
           <img src="/images/profile-hex.png" class="tweet">
-          <span class="name"></span>
-          <span class="handle"></span>
+          <div class="user">
+            <span class="name"></span>
+            <span class="handle"></span>
+          </div>
         </header>
         <textarea name="text" maxlength="140" class="tweet"></textarea>
         <footer class="tweet">
@@ -96,4 +101,5 @@
     </section>
   </main>
 </body>
+
 </html>
