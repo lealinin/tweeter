@@ -5,11 +5,7 @@
  */
 
 const renderTweets = function (tweets) {
-  // deletes the hardcoded article at top
   $('.tweet-container').empty();
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('.tweet-container').prepend($tweet);
@@ -17,14 +13,15 @@ const renderTweets = function (tweets) {
 }
 
 const createTweetElement = function (tweet) {
-  // creates a template for all elements of the article
   let $tweet = $("<article>").addClass("tweet");
-  
+
   $tweet.append(`
     <header class="tweet">
       <img src="${tweet.user.avatars}">
+      <div class="user">
       <span>${tweet.user.name}</span>
       <span>${tweet.user.handle}</span>
+      </div>
     </header>
     <textarea>${tweet.content.text}</textarea>
     <footer class="tweet">
@@ -36,18 +33,13 @@ const createTweetElement = function (tweet) {
       </div>
     </footer>
   `)
-   // returns the tweet article
   return $tweet;
 }
 
-// When the user submits a new tweet,
-// it should show up on the page without having 
-// to refresh the page
-
-$(document).ready(function() {
+$(document).ready(function () {
   const $form = $('.tweet-post');
   $('#error-message').hide();
-  $form.on('submit', function(event) {
+  $form.on('submit', function (event) {
     console.log('Tweet form clicked, performing ajax call...');
     event.preventDefault();
     let tweetField = $(this).find('textarea').val();
@@ -62,26 +54,27 @@ $(document).ready(function() {
 
     const data = $(this).serialize();
     return $.ajax({
-      url: '/tweets', 
-      method: 'POST', 
+      url: '/tweets',
+      method: 'POST',
       data: data
     })
-    .then(function () {
-      console.log('Success: ', data);
-      loadTweets();
-      $('#error-message').slideUp();
-    });
+      .then(function () {
+        console.log('Success: ', data);
+        loadTweets();
+        $('#error-message').slideUp();
+      });
   });
 });
 
-const loadTweets = function() {
+const loadTweets = function () {
   $.ajax({
     url: '/tweets',
-    method: 'GET'})
-  .then(renderTweets);
+    method: 'GET'
+  })
+    .then(renderTweets);
 }
 
 $('.new-tweet').hide();
-$('.arrow-button').click(function() {
-  $('.new-tweet').slideToggle(); 
+$('.arrow-button').click(function () {
+  $('.new-tweet').slideToggle();
 });
