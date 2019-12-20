@@ -63,7 +63,10 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2 class="tweet-title">Compose Tweet</h2>
+      <div class="validation">
+        <p id="error-message"></p>
+      </div>
+      <!-- <h2 class="tweet-title">Compose Tweet</h2> -->
       <form class="tweet-post" action="/tweets" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
@@ -76,7 +79,7 @@
     <section class="tweet-container">
       <article class="tweet">
         <header class="tweet">
-          <img src="" class="tweet">
+          <img src="/images/profile-hex.png" class="tweet">
           <span class="name"></span>
           <span class="handle"></span>
         </header>
