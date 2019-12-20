@@ -28,14 +28,13 @@
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
   <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script defer type="text/javascript" src="/scripts/client.js"></script>
 
   <!-- Character Counter JS -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
   <!-- Font Awesome JS -->
   <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
-  <!-- <script src="https://use.fontawesome.com/acdb889deb.js"></script> -->
 
 </head>
 
@@ -43,7 +42,12 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
-    <p><strong>Write</strong> a new tweet</p>
+    <div>
+      <p><strong>Write</strong> a new tweet</p>
+      <a class="arrow-button">
+        <i class="fas fa-angle-double-down arrow"></i>
+      </a>
+    </div>
   </nav>
 
   <header>
@@ -60,7 +64,6 @@
   <main class="container">
     <section class="new-tweet">
       <h2 class="tweet-title">Compose Tweet</h2>
-      <!-- Had the .post-tweet -->
       <form class="tweet-post" action="/tweets" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
