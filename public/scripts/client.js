@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 const renderTweets = function (tweets) {
   // deletes the hardcoded article at top
   $('.tweet-container').empty();
@@ -47,17 +46,17 @@ const createTweetElement = function (tweet) {
 
 $(document).ready(function() {
   const $form = $('.tweet-post');
+  $('#error-message').hide();
   $form.on('submit', function(event) {
     console.log('Tweet form clicked, performing ajax call...');
     event.preventDefault();
-    // event.stopPropagation();
     let tweetField = $(this).find('textarea').val();
     if (tweetField.length > 140) {
-      alert('Your tweet is too long!');
+      $('#error-message').html('Your tweet is too looong.').slideDown();
       return;
     }
     if (tweetField === '' || tweetField === null) {
-      alert('Your field is empty');
+      $('#error-message').html('You forgot to type in your tweet.').slideDown();
       return;
     }
 
@@ -70,6 +69,7 @@ $(document).ready(function() {
     .then(function () {
       console.log('Success: ', data);
       loadTweets();
+      $('#error-message').slideUp();
     });
   });
 });
