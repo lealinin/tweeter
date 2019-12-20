@@ -4,31 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Array of tweet objects
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
 
 const renderTweets = function (tweets) {
   // deletes the hardcoded article at top
@@ -66,15 +41,16 @@ const createTweetElement = function (tweet) {
   return $tweet;
 }
 
+// When the user submits a new tweet,
+// it should show up on the page without having 
+// to refresh the page
+
 $(document).ready(function() {
   const $form = $('.tweet-post');
   $form.on('submit', function(event) {
     console.log('Tweet form clicked, performing ajax call...');
     event.preventDefault();
-    // Implement validation before sending the 
-    // form data to the server. If any criterion of 
-    // your validation is not met, you should notify
-    // the user by rendering a message on the page
+    // event.stopPropagation();
     let tweetField = $(this).find('textarea').val();
     if (tweetField.length > 140) {
       alert('Your tweet is too long!');
@@ -89,7 +65,8 @@ $(document).ready(function() {
     return $.ajax({
       url: '/tweets', 
       method: 'POST', 
-      data: data})
+      data: data
+    })
     .then(function () {
       console.log('Success: ', data);
       loadTweets();
@@ -104,3 +81,7 @@ const loadTweets = function() {
   .then(renderTweets);
 }
 
+$('.new-tweet').hide();
+$('.arrow-button').click(function() {
+  $('.new-tweet').slideToggle(); 
+});
