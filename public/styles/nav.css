@@ -21,7 +21,7 @@ nav span {
 }
 
 .arrow {
-  color: #daa520;
+  color: #DC143C; 
   -webkit-animation: arrow-jump 1s infinite;
   -moz-animation:    arrow-jump 1s infinite
   -o-animation:      arrow-jump 1s infinite;
@@ -36,4 +36,19 @@ nav span {
     -o-transform: translateY(10px);
     transform: translateY(10px);
     }  
+}
+
+ /* Tablet Styles */
+ @media only screen and (min-width: 768px) {
+  nav {
+    background-color: #daa520;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
 }
