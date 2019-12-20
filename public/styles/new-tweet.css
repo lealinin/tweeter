@@ -20,7 +20,7 @@ textarea {
   font-weight: 400;
   font-style: normal;
   border-bottom: 4px solid black;
-  margin-top: .10em;
+  margin-top: 1.75em;
 }
 
 .counter {
@@ -39,7 +39,7 @@ article {
   flex: 1;
   flex-direction: column;
   padding: .35em;
-  margin: 1.75em;
+  margin-bottom: 1.25em;
 }
 
 article.tweet header {
@@ -48,8 +48,17 @@ article.tweet header {
   display: flex;
 }
 
-span.handle {
-  margin-left: auto;
+.user .name {
+  float: left;
+}
+
+.user .handle {
+  float: right;
+}
+
+.handle span {
+  color:#4154A1;
+  opacity: 40%;
 }
 
 article.tweet footer {
@@ -65,10 +74,8 @@ article:hover {
 }
 
 img.tweet {
-  /* max-width: 100%;
-  height: auto; */
   width: 50px;
-  height: 50px; /* for now */
+  height: 50px;
 }
 
 #error-message {
@@ -78,5 +85,9 @@ img.tweet {
   height: auto;
   border: 4px solid red;
   color: red;
+}
+
+.icons {
+  color:  #4056A1;
 }
 
