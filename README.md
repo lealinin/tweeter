@@ -15,3 +15,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Tablet nav"](https://github.com/lealinin/tweeter/blob/master/docs/1.tablet-nav.png)
+!["Desktop nav"](https://github.com/lealinin/tweeter/blob/master/docs/2.desktop-nav.png)
+!["Tweets"](https://github.com/lealinin/tweeter/blob/master/docs/3.tweets.png)
+!["First error message"](https://github.com/lealinin/tweeter/blob/master/docs/4.error-message-1.png)
+!["Second error message"](https://github.com/lealinin/tweeter/blob/master/docs/5.error-message-2.png)
