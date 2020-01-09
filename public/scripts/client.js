@@ -74,6 +74,8 @@ const loadTweets = function () {
     .then(renderTweets);
 }
 
+loadTweets();
+
 $('.new-tweet').hide();
 $('.arrow-button').click(function () {
   $('.new-tweet').slideToggle();
