@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log('here');
   $('textarea').keyup(function() {
     // console.log('test');
     let length = $(this).val().length;
