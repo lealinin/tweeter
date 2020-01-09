@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $('textarea').keyup(function() {
-    // console.log('test');
     let length = $(this).val().length;
     let counter = 140;
     if (counter - length < 0) {
