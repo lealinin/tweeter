@@ -34,7 +34,6 @@ $(document).ready(function () {
   const $form = $('.tweet-post');
   $('#error-message').hide();
   $form.on('submit', function (event) {
-    console.log('Tweet form clicked, performing ajax call...');
     event.preventDefault();
     let tweetField = $(this).find('textarea').val();
     if (tweetField.length > 140) {
@@ -53,7 +52,6 @@ $(document).ready(function () {
       data: data
     })
       .then(function () {
-        console.log('Success: ', data);
         loadTweets();
         $('#error-message').slideUp();
       });
