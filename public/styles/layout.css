@@ -11,7 +11,7 @@ html {
 }
 
 /*
- * Global layout stuff
+ * Global Layout
  */
 
 body {
@@ -22,15 +22,15 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+nav span {
+  font-family: Bungee, Arial, Helvetica, sans-serif;
+}
+
 .container {
   color: #545149;
   width: 90%;
   margin: 0 auto;
   padding-bottom: 3em;
-}
-
-nav span {
-  font-family: Bungee, Arial, Helvetica, sans-serif;
 }
 
 /*
