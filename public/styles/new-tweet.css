@@ -66,9 +66,9 @@ img.tweet {
   height: 50px;
 }
 
-span.handle {
-  color:#4154A1;
-  opacity: 40%;
+.handle {
+  color: #4056A1;
+  opacity: 50%;
 }
 
 .icons {
