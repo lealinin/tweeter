@@ -48,13 +48,13 @@ article.tweet header {
   display: flex;
 }
 
-.user .name {
+/* .user .name {
   float: left;
-}
+} */
 
-.user .handle {
+/* .user .handle {
   float: right;
-}
+} */
 
 .handle span {
   color:#4154A1;
@@ -68,9 +68,9 @@ article.tweet footer {
 
 article:hover {
   border: 4px solid black;
--moz-box-shadow: 5px 5px 0px rgb(105, 128, 202);
--webkit-box-shadow: 5px 5px 0px rgb(105, 128, 202);
-  box-shadow: 5px 10px 0px rgb(105, 128, 202);
+-moz-box-shadow: 5px 5px 0px rgba(105, 128, 202, 50%);
+-webkit-box-shadow: 5px 5px 0px rgba(105, 128, 202, 50%);
+  box-shadow: 5px 10px 0px rgba(105, 128, 202, 50%);
 }
 
 img.tweet {
