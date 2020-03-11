@@ -1,3 +1,5 @@
+/* Styling for tweet field */
+
 input {
   background-color: #4154A1;
   font-family: 'Bungee', cursive;
@@ -23,14 +25,8 @@ textarea {
   margin-top: 1.75em;
 }
 
-.counter {
-  font-family: 'Bungee', cursive;
-  float: right;
-  font-weight: 600;
-}
-
-.tweet-title {
-  color: #43464B;
+footer {
+  margin-top: 8px;
 }
 
 article {
@@ -42,40 +38,43 @@ article {
   margin-bottom: 1.25em;
 }
 
-article.tweet header {
+article header {
   height: 100%;
   background-color: #f4f1ec;
   display: flex;
 }
 
-/* .user .name {
-  float: left;
-} */
-
-/* .user .handle {
-  float: right;
-} */
-
-.handle span {
-  color:#4154A1;
-  opacity: 40%;
-}
-
-article.tweet footer {
+article footer {
   display: flex;
   justify-content: space-between;
 }
 
 article:hover {
   border: 4px solid black;
--moz-box-shadow: 5px 5px 0px rgba(105, 128, 202, 50%);
--webkit-box-shadow: 5px 5px 0px rgba(105, 128, 202, 50%);
+  -moz-box-shadow: 5px 5px 0px rgba(105, 128, 202, 50%);
+  -webkit-box-shadow: 5px 5px 0px rgba(105, 128, 202, 50%);
   box-shadow: 5px 10px 0px rgba(105, 128, 202, 50%);
 }
 
 img.tweet {
   width: 50px;
   height: 50px;
+}
+
+span.handle {
+  color:#4154A1;
+  opacity: 40%;
+}
+
+.icons {
+  color: #4056A1;
+  font-size: 20px;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+  float: right;
+  font-weight: 600;
 }
 
 #error-message {
@@ -85,9 +84,5 @@ img.tweet {
   height: auto;
   border: 4px solid red;
   color: red;
-}
-
-.icons {
-  color:  #4056A1;
 }
 
