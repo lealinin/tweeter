@@ -6,7 +6,7 @@ const renderTweets = function (tweets) {
   }
 }
 
-const createdAt = function(time) {
+const createdAt = function (time) {
   const timeDiff = Date.now() - time;
   if (timeDiff >= 31556952000) {
     return `${Math.floor(timeDiff / 31556952000)} years`;
@@ -29,7 +29,7 @@ const createTweetElement = function (tweet) {
   let $tweet = $("<article>").addClass("tweet");
 
   $tweet.append(`
-    <header class="tweet">
+    <header>
       <img src="${tweet.user.avatars}">
       <div class="user">
       <span class="name">${tweet.user.name}</span>
