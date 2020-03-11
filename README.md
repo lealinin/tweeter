@@ -18,8 +18,17 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Tablet nav"](https://github.com/lealinin/tweeter/blob/master/docs/1.tablet-nav.png)
-!["Desktop nav"](https://github.com/lealinin/tweeter/blob/master/docs/2.desktop-nav.png)
-!["Tweets"](https://github.com/lealinin/tweeter/blob/master/docs/3.tweets.png)
-!["First error message"](https://github.com/lealinin/tweeter/blob/master/docs/4.error-message-1.png)
-!["Second error message"](https://github.com/lealinin/tweeter/blob/master/docs/5.error-message-2.png)
+### Page with Tweet Box 
+!["Page with Tweet Box"](https://github.com/lealinin/tweeter/blob/master/docs/page-with-tweet-box.png)
+
+### Added Tweets 
+!["Tweets"](https://github.com/lealinin/tweeter/blob/master/docs/tweets.png)
+
+### Tweet Container on Hover
+!["Tweet Container"](https://github.com/lealinin/tweeter/blob/master/docs/tweet-box.png)
+
+### Empty Tweet Error Message
+!["Empty Tweet Error Message"](https://github.com/lealinin/tweeter/blob/master/docs/empty-tweet.png)
+
+### Long Tweet Error Message
+!["Long Tweet Error Message"](https://github.com/lealinin/tweeter/blob/master/docs/long-tweet.png)
