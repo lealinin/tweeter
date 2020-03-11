@@ -35,6 +35,20 @@ nav span {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+.tweet-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.new-tweet {
+  margin-bottom: 50px;
+}
+
+.divider {
+  max-width: 100%;
+  height: 60px;
+}
+
 .profile-img {
   margin-top: 10px;
 }
