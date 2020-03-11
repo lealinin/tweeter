@@ -77,6 +77,11 @@ span.handle {
   font-weight: 600;
 }
 
+article .tweet {
+  display: flex;
+  justify-content: space-between;
+}
+
 #error-message {
   margin-top: 1em;
   margin-bottom: .50em;
