@@ -6,6 +6,25 @@ const renderTweets = function (tweets) {
   }
 }
 
+const createdAt = function(time) {
+  const timeDiff = Date.now() - time;
+  if (timeDiff >= 31556952000) {
+    return `${Math.floor(timeDiff / 31556952000)} years`;
+  } else if (timeDiff >= 2592000000) {
+    return `${Math.floor(timeDiff / 2592000000)} months`;
+  } else if (timeDiff >= 604800000) {
+    return `${Math.floor(timeDiff / 604800000)} weeks`;
+  } else if (timeDiff >= 86400000) {
+    return `${Math.floor(timeDiff / 86400000)} days`;
+  } else if (timeDiff >= 3600000) {
+    return `${Math.floor(timeDiff / 3600000)} hours`;
+  } else if (timeDiff >= 60000) {
+    return `${Math.floor(timeDiff / 60000)} minutes`;
+  } else {
+    return `${Math.floor(timeDiff / 1000)} seconds`;
+  }
+};
+
 const createTweetElement = function (tweet) {
   let $tweet = $("<article>").addClass("tweet");
 
@@ -19,7 +38,7 @@ const createTweetElement = function (tweet) {
     </header>
     <textarea>${tweet.content.text}</textarea>
     <footer class="tweet">
-      <span>${tweet.created_at}</span>
+      <span>${createdAt(tweet.created_at)} ago</span>
       <div class="icons">
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
